@@ -1,65 +1,99 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <main style={{ fontFamily: "Arial, sans-serif" }}>
+      {/* Hero Section */}
+      <section
+        style={{
+          textAlign: "center",
+          padding: "80px 20px",
+          background: "#fff8e1",
+        }}
+      >
+        <h1 style={{ fontSize: "3rem", color: "#ff9800" }}>Fresh Mangoes 🥭</h1>
+        <p style={{ fontSize: "1.2rem", marginTop: "10px" }}>
+          Taste the sweetness of farm-fresh mangoes delivered to your doorstep
+        </p>
+        <button
+          style={{
+            marginTop: "20px",
+            padding: "12px 25px",
+            backgroundColor: "#ff9800",
+            border: "none",
+            color: "#fff",
+            borderRadius: "6px",
+            cursor: "pointer",
+            fontSize: "16px",
+          }}
+        >
+          Order Now
+        </button>
+      </section>
+
+      {/* About Section */}
+      <section style={{ padding: "50px 20px", textAlign: "center" }}>
+        <h2>About Our Mangoes</h2>
+        <p style={{ maxWidth: "600px", margin: "auto" }}>
+          We provide naturally ripened, chemical-free mangoes directly from
+          farms. Our mangoes are handpicked to ensure the best quality and
+          taste.
+        </p>
+      </section>
+
+      {/* Varieties Section */}
+      <section
+        style={{
+          padding: "50px 20px",
+          background: "#fff3cd",
+          textAlign: "center",
+        }}
+      >
+        <h2>Our Varieties</h2>
+
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            gap: "20px",
+            flexWrap: "wrap",
+            marginTop: "20px",
+          }}
+        >
+          {["Alphonso", "Himsagar", "Langra"].map((item) => (
+            <div
+              key={item}
+              style={{
+                padding: "20px",
+                background: "#fff",
+                borderRadius: "10px",
+                width: "200px",
+                boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
+              }}
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+              <h3>{item} Mango</h3>
+              <p>Sweet & juicy premium quality</p>
+            </div>
+          ))}
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </section>
+
+      {/* Contact Section */}
+      <section style={{ padding: "50px 20px", textAlign: "center" }}>
+        <h2>Contact Us</h2>
+        <p>📞 +91 9876543210</p>
+        <p>📍 Durgapur, India</p>
+      </section>
+
+      {/* Footer */}
+      <footer
+        style={{
+          textAlign: "center",
+          padding: "20px",
+          background: "#ff9800",
+          color: "#fff",
+        }}
+      >
+        <p>© 2026 Mango Company | All Rights Reserved</p>
+      </footer>
+    </main>
   );
 }
