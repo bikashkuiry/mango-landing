@@ -79,7 +79,7 @@ export default function Home() {
       {/* Contact Section */}
       <section style={{ padding: "50px 20px", textAlign: "center" }}>
         <h2>Contact Us</h2>
-        <p>📞 +91 9876543210</p>
+        <p>📞 +91 7858043087</p>
         <p>📍 Durgapur, India</p>
       </section>
 
