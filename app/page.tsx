@@ -1,98 +1,68 @@
 export default function Home() {
+  const products = [
+    {
+      name: "Alphonso Mango",
+      price: "₹1200 / dozen",
+      desc: "Rich, sweet and premium quality mango",
+      img: "https://images.unsplash.com/photo-1553279768-865429fa0078",
+    },
+    {
+      name: "Himsagar Mango",
+      price: "₹900 / dozen",
+      desc: "Juicy and fiberless mango",
+      img: "https://images.unsplash.com/photo-1591073113125-e46713c829ed",
+    },
+    {
+      name: "Langra Mango",
+      price: "₹800 / dozen",
+      desc: "Tangy-sweet taste",
+      img: "https://images.unsplash.com/photo-1605027990121-cbae9c1f7a6c",
+    },
+  ];
+
   return (
-    <main style={{ fontFamily: "Arial, sans-serif" }}>
+    <main className="bg-yellow-50 min-h-screen p-6 text-center">
       {/* Hero Section */}
-      <section
-        style={{
-          textAlign: "center",
-          padding: "80px 20px",
-          background: "#fff8e1",
-        }}
-      >
-        <h1 style={{ fontSize: "3rem", color: "#ff9800" }}>Fresh Mangoes 🥭</h1>
-        <p style={{ fontSize: "1.2rem", marginTop: "10px" }}>
-          Taste the sweetness of farm-fresh mangoes delivered to your doorstep
-        </p>
-        <button
-          style={{
-            marginTop: "20px",
-            padding: "12px 25px",
-            backgroundColor: "#ff9800",
-            border: "none",
-            color: "#fff",
-            borderRadius: "6px",
-            cursor: "pointer",
-            fontSize: "16px",
-          }}
-        >
-          Order Now
-        </button>
-      </section>
+      <h1 className="text-4xl font-bold mb-4 text-orange-600">
+        Fresh Mangoes 🥭
+      </h1>
+      <p className="mb-8 text-lg">
+        Buy sweet and fresh mangoes directly from farm
+      </p>
 
-      {/* About Section */}
-      <section style={{ padding: "50px 20px", textAlign: "center" }}>
-        <h2>About Our Mangoes</h2>
-        <p style={{ maxWidth: "600px", margin: "auto" }}>
-          We provide naturally ripened, chemical-free mangoes directly from
-          farms. Our mangoes are handpicked to ensure the best quality and
-          taste.
-        </p>
-      </section>
+      {/* Products */}
+      <h2 className="text-2xl font-semibold mb-6">Our Products</h2>
 
-      {/* Varieties Section */}
-      <section
-        style={{
-          padding: "50px 20px",
-          background: "#fff3cd",
-          textAlign: "center",
-        }}
-      >
-        <h2>Our Varieties</h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {products.map((item, index) => (
+          <div
+            key={index}
+            className="bg-white p-4 rounded-xl shadow-lg hover:scale-105 transition"
+          >
+            <img
+              src={item.img}
+              alt={item.name}
+              className="w-full h-40 object-cover rounded"
+            />
 
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            gap: "20px",
-            flexWrap: "wrap",
-            marginTop: "20px",
-          }}
-        >
-          {["Alphonso", "Himsagar", "Langra"].map((item) => (
-            <div
-              key={item}
-              style={{
-                padding: "20px",
-                background: "#fff",
-                borderRadius: "10px",
-                width: "200px",
-                boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
-              }}
+            <h3 className="text-xl font-bold mt-3">{item.name}</h3>
+            <p>{item.desc}</p>
+            <p className="font-semibold mt-2">{item.price}</p>
+
+            <a
+              href="https://wa.me/917858043087"
+              target="_blank"
+              className="inline-block mt-3 bg-green-500 text-white px-4 py-2 rounded"
             >
-              <h3>{item} Mango</h3>
-              <p>Sweet & juicy premium quality</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section style={{ padding: "50px 20px", textAlign: "center" }}>
-        <h2>Contact Us</h2>
-        <p>📞 +91 7858043087</p>
-        <p>📍 Durgapur, India</p>
-      </section>
+              Order on WhatsApp
+            </a>
+          </div>
+        ))}
+      </div>
 
       {/* Footer */}
-      <footer
-        style={{
-          textAlign: "center",
-          padding: "20px",
-          background: "#ff9800",
-          color: "#fff",
-        }}
-      >
-        <p>© 2026 Mango Company | All Rights Reserved</p>
+      <footer className="mt-10 text-gray-600">
+        © 2026 Mango Company | Fresh from Farm
       </footer>
     </main>
   );
