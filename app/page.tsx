@@ -16,7 +16,7 @@ export default function Home() {
       name: "Langra Mango",
       price: "₹800 / dozen",
       desc: "Tangy-sweet taste",
-      img: "https://www.istockphoto.com/photos/ripe-mango",
+      img: "https://media.istockphoto.com/id/463651383/photo/mangoes-composition.jpg?s=2048x2048&w=is&k=20&c=a7Ib7NkufF1nKFd4D-KoBIjxmkhC1XzV22VyuNeCNGI=",
     },
   ];
 
